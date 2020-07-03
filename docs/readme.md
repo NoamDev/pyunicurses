@@ -8,7 +8,7 @@
 
 **General Public License (GPL) v3**
 
-**1\. What is UniCurses?**
+## 1. What is UniCurses?
 
 UniCurses is a Python module that is aimed at providing the Curses functionality on all operating systems (MS Windows, Linux, and Mac OS X) using a unified set of commands that are syntactically close to the native C++ Curses functions. UniCurses strives to be as platform-independent as possible, not only by working on all operating systems (as opposed to the original "curses" module which does not work on Microsoft Windows) but also by ensuring compatibility both with the older (v2.x) and the newer (v3.x) versions of Python.
 
@@ -34,7 +34,7 @@ Public Domain Curses can be downloaded from here:
 
 **NOTE:** While it may be possible to use UniCurses with an older version of Python (v2.6.1) or PDCurses (v3.4) than officially listed as compatible, it has not been tested with such versions of software and as such it's impossible to guarantee that your configuration will work correctly or that you would not have to take extra steps and install additional packages in order to make your configuration work at least in part. It's highly recommended that you upgrade to the latest versions of Python and PDCurses before you install and start using UniCurses.
 
-**2\. Installing UniCurses.**
+## 2. Installing UniCurses.
 
 **NOTE: Since version 1.1 UniCurses is distributed as a Python module distribution. It can be installed on Windows by running the executable (e.g. UniCurses-1.1.win32.exe), and on Linux and Mac OS X by unpacking the tarball and running the setup script using the command "python setup.py install" (from the "UniCurses-1.1" directory). You can still copy "unicurses.py" from the "site-packages" directory to wherever you please for your program to import or use locally.**
 
@@ -52,7 +52,7 @@ It's recommended that you use the first form of the expression so you do not nee
 
 **HINT:** In order to make sure that UniCurses works correctly on your platform, run the test scripts that come bundled with the UniCurses package (many of them are ports of examples from the awesome "NCURSES Programming HOWTO" by Pradeep Padala). They should all run successfully and not crash with an error message.
 
-**3\. Using UniCurses.**
+## 3. Using UniCurses.
 
 While UniCurses tries to stay as faithful to the original C++ syntax of curses functions as possible, there are certain important differences and peculiarities that you must be aware of when writing programs using UniCurses.
 
@@ -70,7 +70,7 @@ stdscr = initscr() # This will work correctly
 
 After the curses is initialized with an expression above, you can use any of the functions provided by UniCurses in a manner similar to the way you would use them with any other standard curses implementation, such as NCurses or PDCurses. Please take a look at the example test scripts (test_*.py) and read the Curses manuals, such as the NCurses HOWTO, in order to learn about how to work with curses.
 
-**4\. Functions provided by UniCurses.**
+## 4. Functions provided by UniCurses.
 
 Here is a list of Curses functions that are provided by UniCurses. Most of them use the same syntax as their Ncurses/PDCurses counterparts, some functions are similar to the ones used in the "curses" module in Python (on Linux/Mac OS X), and som functions are specific to Unicurses. The differences in syntax from the standard Ncurses/PDCurses, as well as portability issues, will in most cases be noted separately.
 
@@ -554,7 +554,7 @@ typeahead(fd) -- **NOTE:** this function is a stub on Windows
 
 insdelln, insertln, winsdelln, winsertln, noutrefresh, setscrreg, unctrl.
 
-**5. ****Constants provided by UniCurses.**
+## 5. Constants provided by UniCurses.
 
 UniCurses provides the following constants on all platforms:
 
@@ -936,7 +936,7 @@ ALL_MOUSE_EVENTS
 
 REPORT_MOUSE_POSITION
 
-**6. ****Unimplemented things.**
+## 6. Unimplemented things.
 
 The following features are not yet completely implemented or may have bugs:
 
@@ -944,7 +944,7 @@ The following features are not yet completely implemented or may have bugs:
 
 - The module "textpad" (curses.textpad) has not yet been ported to UniCurses.
 
-**7\. Some final technical considerations.**
+## 7. Some final technical considerations.
 
 1) Many UniCurses functions return ERR in case an error occurs while executing them. This behavior is the same across all platforms (note that it's different from the method used in the original "curses" Python module, where an exception is thrown in case of an error).
 
